@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<!-- Title of page -->
+
+<head>
+	<title>Psychic Game</title>
+</head>
+
+<!-- Page Body -->
+
+<body>
+
+<h1>Psychic Game!</h1>
+
+<hr>
+
+<h2>Guess what letter I'm thinking of.</h2>
+
+
+<div id="container">
+	<div class="row">
+		<div class="col-md-12">
+			<p id="wins">Wins:</p>
+		</div>
+			
+		<div class="col-md-12">
+			<p id="losses">Losses:</p>
+		</div>
+
+		<div class="col-md-12">
+			<p id="guessesleft">Guesses Left:</p>
+		</div>
+
+		<div class="col-md-12">
+			<p id="guessestotal">Your Guesses So Far:</p>
+		</div>
+
+		<div class="col-md-12">
+			<p></p>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	
+var letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+document.onkeyup = function(event) {
+
+	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+	document.getElementById("guessestotal").innerHTML = "Your Guesses So Far: " + userGuess;
+
+	//alert(userGuess);
+
+	var computerGuess = letter[Math.floor(Math.random()*letter.length)];
+
+	alert(computerGuess);
+
+}
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
